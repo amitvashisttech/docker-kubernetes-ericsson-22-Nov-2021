@@ -119,3 +119,77 @@
   119  cd 01-Docker-Containers/
   120  ls
   121  history > Day1_History.txt
+  122  ls
+  123  cd ..
+  124  ls
+  125  cd ..
+  126  lls
+  127  ls
+  128  git add . ; git commit -m "Docker"; git push 
+  129  ls
+  130  cd mkdir 01-Docker/02-Dockerfile
+  131  cd mkdir 01-Docker/02-Dockerfile -p 
+  132  ls
+  133  mkdir 01-Docker/02-Dockerfile -p 
+  134  cd 01-Docker/02-Dockerfile/
+  135  ls
+  136  vim Dockerfile
+  137  docker build -t webapp:v1 . 
+  138  docker images 
+  139  docker run -d --name test-web-1 webapp:v1 
+  140  docker ps 
+  141  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  142  curl 172.17.0.2
+  143  docker ps 
+  144  telnet 172.17.0.2 3306 
+  145  telnet 172.17.0.2 80 
+  146  ls
+  147  mkdir v1
+  148  mv Dockerfile v1
+  149  cp -rf v1 v2 
+  150  ls
+  151  cd v2/
+  152  ls
+  153  vim Dockerfile 
+  154  docker build -t webapp:v2 . 
+  155  docker images 
+  156  docker run -d --name test-web-2 webapp:v2
+  157  docker ps 
+  158  telnet 172.17.0.3 80 
+  159  ls
+  160  cd ..
+  161  ls
+  162  cp -rf v2 v3
+  163  ls
+  164  cd v3/
+  165  ls
+  166  vim Dockerfile 
+  167  ls
+  168  docker build -t webapp:v3 . 
+  169  docker ps 
+  170  docker run -d --name test-web-3 webapp:v3
+  171  docker ps 
+  172  telnet 172.17.0.4 80 
+  173  telnet 172.17.0.4 3306
+  174  curl 172.17.0.4
+  175  ls
+  176  cd ..
+  177  ls
+  178  cp -rf v3 v4
+  179  ls
+  180  cd v4/
+  181  ls
+  182  vim amit.html
+  183  ls
+  184  vim Dockerfile 
+  185  ls
+  186  docker build -t webapp:v4 . 
+  187  ls
+  188  docker run -d --name test-web-4 webapp:v4
+  189  curl 172.17.0.5
+  190  ls
+  191  cd ..
+  192  ls
+  193  cd ..
+  194  ls
+  195  history > 01-Docker-Containers/Day1_History.txt 
