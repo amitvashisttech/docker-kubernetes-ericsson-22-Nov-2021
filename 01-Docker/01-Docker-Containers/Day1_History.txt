@@ -1,0 +1,121 @@
+    1  ls
+    2  git clone https://github.com/amitvashisttech/docker-kubernetes-ericsson-22-Nov-2021.git
+    3  git pull 
+    4  l
+    5  cd docker-kubernetes-ericsson-22-Nov-2021/
+    6  ls
+    7  git pull 
+    8  ls
+    9  cd 01-Docker/
+   10  ls
+   11  cd 00-Setup/
+   12  ls
+   13  ./install-docker.sh 
+   14  docker version 
+   15  history 
+   16  ls
+   17  cd ..
+   18  ls
+   19  cd ..
+   20  ls
+   21  cat README.md 
+   22  ls -ltr 
+   23  cat README.md 
+   24  git pull 
+   25  cat README.md 
+   26  ls
+   27  docker version 
+   28  ls
+   29  docker run busybox echo "Hello World" 
+   30  ls
+   31  docker container ls 
+   32  docker container ls -a 
+   33  docker run busybox echo "Welcome to Docker - Test 1" 
+   34  docker run busybox echo "Welcome to Docker - Test 2" 
+   35  docker images 
+   36  docker container ls
+   37  docker container ls -a 
+   38  history 
+   39  docker images 
+   40  docker pull amitvashist7/nginx-web:v1 
+   41  docker images 
+   42  docker pull amitvashist7/apache-ex4:latest
+   43  docker login 
+   44  docker pull amitvashist7/apache-ex4:latest
+   45  history 
+   46  ls
+   47  docker pull ubuntu
+   48  docker images 
+   49  docker pull ubuntu:16.04
+   50  docker images 
+   51  cat /etc/os-release 
+   52  docker run -it ubuntu cat /etc/os-release
+   53  docker run  ubuntu:16.04 cat /etc/os-release
+   54  ls
+   55  docker images 
+   56  history 
+   57  ls
+   58  cd 01-Docker/
+   59  ls
+   60  mkdir 01-Docker-Containers
+   61  ls
+   62  docker ps 
+   63  docker run ubuntu echo "Hello World" 
+   64  docker ps 
+   65  docker ps -a
+   66  docker run --name test-inst-1 ubuntu echo "Hello World" 
+   67  docker run --name test-inst-2 ubuntu echo "Hello World" 
+   68  docker ps 
+   69  docker ps -a
+   70  docker run -it  --name test-inst-3 ubuntu 
+   71  docker ps 
+   72  docker ps -a 
+   73  docker start test-inst-3
+   74  docker ps 
+   75  docker run -it  --name test-inst-3 ubuntu 
+   76  docker run -it  --name test-inst-4 ubuntu 
+   77  docker ps 
+   78  docker ps -a
+   79  docker ps 
+   80  docker attach test-inst-4
+   81  docker attach test-inst-3
+   82  ls
+   83  docker ps 
+   84  docker ps -l 
+   85  docker ps -lq 
+   86  docker kill $(docker ps -lq) 
+   87  docker ps -lq 
+   88  docker ps 
+   89  docker stop test-inst-3
+   90  docker ps -a 
+   91  docker start test-inst-3
+   92* 
+   93  docker inspect test-inst-3
+   94  docker inspect --format '{{.Name}}' test-inst-3
+   95  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' test-inst-3
+   96  docker run -itd  --name test-inst-5 ubuntu 
+   97  docker run -itd  --name test-inst-6 ubuntu 
+   98  docker run -itd  --name test-inst-7 ubuntu 
+   99  docker ps 
+  100  docker ps -q
+  101  docker inspect --format '{{.Name}} {{.NetworkSettings.IPAddress}}' $(docker ps -q)
+  102  docker attach test-inst-7
+  103  docker ps 
+  104  docker ps -a 
+  105  docker start test-inst-7
+  106  docker ps 
+  107  docker attach test-inst-7
+  108  ls
+  109  docker ps 
+  110  docker exec -it test-inst-7 ls -ltr 
+  111  docker exec -it test-inst-7 cat hello.txt
+  112  docker ps 
+  113  docker ps -q
+  114  docker kill $(docker ps -q) 
+  115  docker ps -a 
+  116  docker rm $( docker ps -qa) 
+  117  docker ps -a 
+  118  ls
+  119  cd 01-Docker-Containers/
+  120  ls
+  121  history > Day1_History.txt
