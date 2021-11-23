@@ -6,10 +6,8 @@ metadata:
     run: mypython
   name: mypython
 spec:
-  imagePullSecrets:
-  - name: regcred
   containers:
-  - image: amitvashist7/mypywebapp:v3
+  - image: amitvashist7/mypython-web-app-ericsson-22-nov-2021:v1
     name: mypython
     ports:
     - containerPort: 8081

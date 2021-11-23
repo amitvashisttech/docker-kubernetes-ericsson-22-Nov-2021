@@ -18,7 +18,7 @@ kubectl describe pods hello-k8s
 
 ## Let's Deploy our newly built PythonWeb App.
 ```
-kubectl run mypythonwebapp --image=amitvashist7/mypywebapp:v3 --port=8081
+kubectl run mypythonwebapp --image=amitvashist7/mypython-web-app-ericsson-22-nov-2021:v1 --port=8081
 ```
 ```
 kubectl get pods
