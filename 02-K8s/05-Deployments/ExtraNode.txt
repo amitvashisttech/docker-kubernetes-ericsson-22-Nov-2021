@@ -1,0 +1,103 @@
+```
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+3         <none>
+4         <none>
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments#
+
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+4         <none>
+5         <none>
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments#
+
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+5         <none>
+6         <none>
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments#
+
+
+
+New REVISION No : N + 1 , N is the current Value 
+
+Rollback N - 1 
+
+It will keep the unique info. 
+
+
+
+
+New Value = 4 + 1 = 5 
+
+Rollback N - 1 , 4 - 1 = 3 
+
+It will keep the unique info. ( 5 & 3 ) point to same info that's why we don't to keep version 3 in the history 	
+
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+4         <none>
+5         <none>
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# 
+
+
+
+New Value = 5 + 1 = 6 
+
+Rollback N - 1 , 5 - 1 = 4 
+
+It will keep the unique info. ( 6 & 4 ) point to same info that's why we don't to keep version 4 in the history 	
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+1         <none>
+2         <none>
+5         <none>
+6         <none>
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments#
+
+
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+1         <none>
+5         <none>
+6         <none>
+7         <none>
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments#
+
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments# kubectl rollout history deploy helloworld-deployment
+deployment.apps/helloworld-deployment
+REVISION  CHANGE-CAUSE
+
+5         <none>
+6         <none>
+7         <none>
+8
+
+root@ip-172-31-10-96:~/docker-kubernetes-ericsson-16-Nov-2021/02-K8s/05-Deployments#
